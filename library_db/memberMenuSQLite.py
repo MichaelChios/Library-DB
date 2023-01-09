@@ -36,7 +36,7 @@ VALUES(?,?,?,?,?,?,?,?,?)"""
         self.con.commit()
 
     def signUp(self, username, password):
-        con2 = sqlite3.connect("database_generation\login_signin.db")
+        con2 = sqlite3.connect("database_generation/login_signin.db")
         cursor = con2.cursor()
         sql = """INSERT INTO login_signin(username, password_hashed, member_admin)
 VALUES(?,?,?)"""
@@ -44,7 +44,7 @@ VALUES(?,?,?)"""
         con2.commit()
 
     def checkIfUsernameExists(self, username):
-        con2 = sqlite3.connect("database_generation\login_signin.db")
+        con2 = sqlite3.connect("database_generation/login_signin.db")
         cursor = con2.cursor()
         query = f"""SELECT username FROM login_signin
 WHERE username = '{username}';"""
