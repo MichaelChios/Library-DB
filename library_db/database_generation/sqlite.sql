@@ -237,7 +237,7 @@ CREATE INDEX index_shelf oN position(shelf);
 
 DROP TABLE IF EXISTS share;
 CREATE TABLE share (
-	share_id INTEGER PRIMARY KEY AUTOINCREMENT
+	share_id INTEGER PRIMARY KEY AUTOINCREMENT,
 	library_id_sharing INTEGER NOT NULL,
 	holding_id INTEGER NOT NULL,
 	library_id_receiving INTEGER NOT NULL,
